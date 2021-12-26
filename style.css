@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url("./images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: hsl(257, 40%, 49%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px auto;
+    margin: 0 2rem;
+}
+
+
+.header img {
+    padding: 2rem 0 2.5rem 0;
+    width: 190px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.right h1 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.right p {
+    color: #fff;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.right a {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 13px 50px;
+    color: hsl(257, 40%, 49%);
+    text-decoration: none;
+    box-shadow: 0 8px 17px -8px rgba(0, 0, 0, .8);
+    transition: all .3s ease;
+}
+
+.right a:hover {
+    color: #fff;
+    background-color: hsl(300, 69%, 71%);
+}
+
+.social {
+    text-align: right;
+    margin-bottom: 3rem;
+}
+
+.social a i {
+    color: #fff;
+    margin-left: 2rem;
+    font-size: 18px;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.social a:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.social a i::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    left: -9px;
+    bottom: -8px;
+    transition: all .3s ease;
+}
+
+.social a:nth-child(2) {
+    margin-left: 2.4rem;
+}
+
+.social a i:hover {
+    color: hsl(300, 69%, 71%);
+}
+
+.social a i:hover::after {
+    border-color: hsl(300, 69%, 71%);
+}
+
+@media only screen and (max-width: 1360px) {
+    .left img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .main {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 515px) {
+   .right h1 {
+       font-size: 25px;
+   }
+
+   .right p {
+       font-size: 15px;
+   }
+   .main {
+       text-align: center;
+   }
+
+   .social {
+       text-align: center;
+       margin-top: 40px;
+   }
+
+   .right a {
+       padding: 12px 50px;
+   }
+}
